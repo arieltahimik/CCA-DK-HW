@@ -42,7 +42,7 @@ public with sharing class VariablesDataTypesOperators {
         // System.debug('a = ' + String.valueOf(a) + ' >>> b = ' + String.valueOf(b));
         System.debug('a = ' + a + ' >>> b = ' + b);
         
-        return (a != null && b != null) ? a + b : null;        
+        return (a != null && b != null) ? a + b : null;
     }
 
     /**
@@ -54,7 +54,16 @@ public with sharing class VariablesDataTypesOperators {
      * @return The difference between the two numbers.
      */
     public static Integer subtraction(Integer a, Integer b) {
-        return null; // Replace null with the variable you used to store the result
+        // if (a == null || b == null) {
+        //     return null;
+        // }
+        // return a - b;
+        
+        // -OR-
+
+        System.debug('a = ' + a + ' >>> b = ' + b);
+        
+        return (a != null && b != null) ? a - b : null;
     }
 
     /**
