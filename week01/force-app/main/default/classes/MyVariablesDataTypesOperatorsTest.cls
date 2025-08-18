@@ -75,4 +75,14 @@ public with sharing class MyVariablesDataTypesOperatorsTest {
         result = VariablesDataTypesOperators.isEven(null);
         Assert.areEqual(null, result, 'Expected null but got ' + result);
     }
+
+    @IsTest 
+    static void testIsPositive() {
+        Boolean result = VariablesDataTypesOperators.isPositive(10);
+        Assert.areEqual(true, result, 'Incorrect isPositive result.');
+        result = VariablesDataTypesOperators.isPositive(-10);
+        Assert.areEqual(false, result, 'Incorrect isPositive result.');
+        result = VariablesDataTypesOperators.isPositive(null);
+        Assert.areEqual(null, result, 'Incorrect isPositive null result.');
+    }
 }
