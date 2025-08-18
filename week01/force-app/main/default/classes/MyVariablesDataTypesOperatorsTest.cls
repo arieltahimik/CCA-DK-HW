@@ -65,4 +65,14 @@ public with sharing class MyVariablesDataTypesOperatorsTest {
         result = VariablesDataTypesOperators.division(5, null);
         Assert.areEqual(null, result, 'Incorrect null division result.');
     }
+
+    @IsTest 
+    static void testIsEven() {
+        Boolean result = VariablesDataTypesOperators.isEven(10);
+        Assert.areEqual(true, result, 'Incorrect isEven() result');
+        result = VariablesDataTypesOperators.isEven(5);
+        Assert.areEqual(false, result, 'Incorrect isEven() result');
+        result = VariablesDataTypesOperators.isEven(null);
+        Assert.areEqual(null, result, 'Expected null but got ' + result);
+    }
 }
