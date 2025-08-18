@@ -75,8 +75,12 @@ public with sharing class VariablesDataTypesOperators {
      * @return The product of the two numbers.
      */
     public static Integer multiplication(Integer a, Integer b) {
-        if (a == null || b == null) { return null; }        
-        return a * b;
+        // if (a == null || b == null) { return null; }        
+        // return a * b;
+
+        // -OR-
+        
+        return (a != null && b != null) ? a * b : null;
     }
 
     /**
