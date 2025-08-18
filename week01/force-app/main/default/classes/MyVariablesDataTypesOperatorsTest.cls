@@ -24,21 +24,33 @@ public with sharing class MyVariablesDataTypesOperatorsTest {
     @IsTest
     static void testSubtraction() {
         Integer result = VariablesDataTypesOperators.subtraction(null, 10);
-        Assert.areEqual(null, result, 'Incorrent null subtraction result.');
+        Assert.areEqual(null, result, 'Incorrect null subtraction result.');
         
         result = VariablesDataTypesOperators.subtraction(10, null);
-        Assert.areEqual(null, result, 'Incorrent null subtraction result.');
+        Assert.areEqual(null, result, 'Incorrect null subtraction result.');
         
         result = VariablesDataTypesOperators.subtraction(null, null);
-        Assert.areEqual(null, result, 'Incorrent null subtraction result.');
+        Assert.areEqual(null, result, 'Incorrect null subtraction result.');
         
         result = VariablesDataTypesOperators.subtraction(50, 20);
-        Assert.areEqual(30, result, 'Incorrent subtraction result.');
+        Assert.areEqual(30, result, 'Incorrect subtraction result.');
         
         result = VariablesDataTypesOperators.subtraction(20, 50);
-        Assert.areEqual(-30, result, 'Incorrent subtraction result.');
+        Assert.areEqual(-30, result, 'Incorrect subtraction result.');
         
         result = VariablesDataTypesOperators.subtraction(-20, -10);
-        Assert.areEqual(-10, result, 'Incorrent negative numbers subtraction result.');
+        Assert.areEqual(-10, result, 'Incorrect negative numbers subtraction result.');
+    }
+
+    @IsTest
+    static void testMultiplication() {
+        Integer result = VariablesDataTypesOperators.multiplication(25, 10);
+        Assert.areEqual(250, result, 'Incorrect multiplication result.');
+        result = VariablesDataTypesOperators.multiplication(25, -10);
+        Assert.areEqual(-250, result, 'Incorrect negative multiplication result.');
+        result = VariablesDataTypesOperators.multiplication(null, 10);
+        Assert.areEqual(null, result, 'Incorrect null multiplication result.');
+        result = VariablesDataTypesOperators.multiplication(25, null);
+        Assert.areEqual(null, result, 'Incorrect null multiplication result.');
     }
 }
