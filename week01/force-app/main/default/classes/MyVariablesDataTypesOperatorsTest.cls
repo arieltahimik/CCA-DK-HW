@@ -95,4 +95,25 @@ public with sharing class MyVariablesDataTypesOperatorsTest {
         result = VariablesDataTypesOperators.concatenateStrings('Hello', null);
         Assert.areEqual(null, result, 'Incorrect string concatenation result.');
     }
+
+    @IsTest 
+    static void createSentence() {
+        String result = VariablesDataTypesOperators.createSentence('cat', 'jumping', '.');
+        Assert.areEqual('The cat is jumping.', result, 'Incorrect sentence result.');
+
+        result = VariablesDataTypesOperators.createSentence('bird', 'flying', '?');
+        Assert.areEqual('The bird is flying?', result, 'Incorrect sentence result.');
+        
+        result = VariablesDataTypesOperators.createSentence('dog', 'running', '!');
+        Assert.areEqual('The dog is running!', result, 'Incorrect sentence result.');
+        
+        result = VariablesDataTypesOperators.createSentence(null, 'testing', '*');
+        Assert.areEqual(null, result, 'Incorrect result on null input.');
+
+        result = VariablesDataTypesOperators.createSentence('testing', null, '*');
+        Assert.areEqual(null, result, 'Incorrect result on null input.');
+
+        result = VariablesDataTypesOperators.createSentence('testing', '*', null);
+        Assert.areEqual(null, result, 'Incorrect result on null input.');
+    }
 }
