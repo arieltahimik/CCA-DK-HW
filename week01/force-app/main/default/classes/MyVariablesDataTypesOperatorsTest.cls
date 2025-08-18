@@ -85,4 +85,14 @@ public with sharing class MyVariablesDataTypesOperatorsTest {
         result = VariablesDataTypesOperators.isPositive(null);
         Assert.areEqual(null, result, 'Incorrect isPositive null result.');
     }
+
+    @IsTest 
+    static void testconcatenateStrings() {
+        String result = VariablesDataTypesOperators.concatenateStrings('Hello', 'World');
+        Assert.areEqual('HelloWorld', result, 'Incorrect string concatenation result.');
+        result = VariablesDataTypesOperators.concatenateStrings(null, 'World');
+        Assert.areEqual(null, result, 'Incorrect string concatenation result.');
+        result = VariablesDataTypesOperators.concatenateStrings('Hello', null);
+        Assert.areEqual(null, result, 'Incorrect string concatenation result.');
+    }
 }
